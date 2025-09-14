@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>𝗘𝗞𝗞𝗔 𝗕𝗛𝗔𝗜 𝗢𝗥𝗜𝗚𝗜𝗡𝗔𝗟 👑</title>
+  <link rel="icon" href="./logo.jpg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --primary-color: #4d0429;
+      --secondary-color: #ffffff;
+      --accent-color: #ffc0cb;
+      --bg-gradient: linear-gradient(to right, #8e8a8a, #3b001b, #ff69b4);
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-gradient);
+      color: var(--secondary-color);
+    }
+
+    h1 {
+      animation: textGlow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes textGlow {
+      0% {
+        text-shadow: 0 0 5px var(--accent-color), 0 0 10px var(--primary-color);
+      }
+      100% {
+        text-shadow: 0 0 20px var(--accent-color), 0 0 30px var(--primary-color);
+      }
+    }
+
+    .animated-button {
+      background: var(--primary-color);
+      color: var(--secondary-color);
+       padding: 12px 24px;
+      border-radius: 0px;
+      font-size: 1rem;
+      font-weight: bold;
+      animation: buttonBounce 1.5s infinite;
+      transition: transform 0.3s;
+    }
+
+    @keyframes buttonBounce {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+
+
+
+    @media (max-width: 640px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .animated-button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+      }
+    }
+    .loader-container {
+      position: relative;
+      width: 100px;
+      height: 100px;
+    }
+
+    .circle {
+      width: 100px;
+      height: 100px;
+      border: 10px solid #444;
+      border-radius: 50%;
+      position: absolute;
+      animation: rotate 30s linear forwards;
+      border-top-color: #ff0000;
+    }
+
+    .countdown {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body class="bodybox text-white ">
+  <header class="text-center py-2 ">
+    <img src="logo.jpg" class="w-16 h-16 rounded-full place-self-center " alt="">
+    <h1 class="text-4xl font-extrabold">𝗘𝗞𝗞𝗔 𝗕𝗛𝗔𝗜 𝗢𝗥𝗜𝗚𝗜𝗡𝗔𝗟 👑</h1>
+    <p class="text-lg mt-2">Cricket trading ki duniya ka King 👑 💰</p>
+  </header>
+
+  <!-- Logos Section -->
+  <section class="flex gap-2 justify-around" >
+    <div class=" grid place-items-center gap-2 ">
+    <img src="img.jpeg" alt="" class="shadow-lg rounded-full w-16 h-16 border-4 border-pink-500">
+    <img src="img.jpg" alt="" class="shadow-lg rounded-full w-16 h-16 border-4 border-pink-500">
+</div>
+<div class=" grid place-items-center">
+    <div class="grid place-items-center">
+        <div class="loader-container">
+          <div class="circle"></div>
+          <div class="countdown" id="countdown">30</div>
+        </div>
+      </div>
+</div>
+<div class="  grid place-items-center gap-2 ">
+    <img src="img.png" alt="" class="shadow-lg rounded-full w-16 h-16 border-4 border-pink-500">
+    <img src="img.webp" alt="" class="shadow-lg rounded-full w-16 h-16 border-4 border-pink-500">
+</div>
+  </section>
+
+  <!-- Call to Action -->
+  <div class="text-center mt-8  ">
+    <a href="https://t.me/+ticZDMFMVB4yNDA1">
+      <button class="animated-button border-4 border-white "  style="box-shadow: 0px 0px 0px 5px rgb(255, 0, 0); background-color: rgb(255, 0, 0);">JOIN 𝗘𝗞𝗞𝗔 𝗕𝗛𝗔𝗜 𝗢𝗥𝗜𝗚𝗜𝗡𝗔𝗟 CHANNEL</button>
+    </a>
+    <p class="mt-4 text-sm font-medium uppercase">BBL 44/43 Pass | IPL 74/73 Pass | T20 World Cup 55/53 Pass</p>
+  </div>
+  <div class="grid place-items-center">
+<div class="text-center">
+   <p>💵💵Join karo lakho kamao💵💵</p>
+   <p> 💰Free free free💰</p>
+ 
+</div>
+</div>
+  <footer class="text-center py-4 mt-8 bg-pink-600 absolute w-full bottom-0">
+    <p class="text-xs">© 2025 𝗘𝗞𝗞𝗔 𝗕𝗛𝗔𝗜 𝗢𝗥𝗜𝗚𝗜𝗡𝗔𝗟 👑. All Rights Reserved.</p>
+  </footer>
+  <script>
+    let timeLeft = 30; // Start at 30 seconds
+    const countdownElement = document.getElementById("countdown");
+
+    const timerInterval = setInterval(() => {
+      if (timeLeft > 0) {
+        timeLeft--;
+        countdownElement.textContent = timeLeft;
+      } else {
+        // clearInterval(timerInterval);
+        // Add what happens after the timer ends
+        timeLeft=30;
+       
+      }
+    }, 1000);
+  </script>
+</body>
+
+</html>
